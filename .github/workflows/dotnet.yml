@@ -28,4 +28,4 @@ jobs:
     - name: pack content
       run: dotnet pack ./letsDo --configuration Release
     - name: deploy package
-      run: dotnet nuget push "letsDo/bin/release/*.nupkg" --api-key ${{ secrets.GIT_PAT }} --source default
+      run: dotnet nuget push "letsDo/bin/release/**.nupkg" --api-key ${{ secrets.GIT_PAT }} --source default
