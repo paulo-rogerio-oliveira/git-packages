@@ -22,10 +22,10 @@ jobs:
     - name: List files
       run: ls
     - name: Restore dependencies
-      run: dotnet restore 
+      run: dotnet restore ./letsDo
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build ./letsDo --configuration Release --no-restore
     - name: pack content
-      run: dotnet pack --configuration Release
+      run: dotnet pack ./letsDo --configuration Release
     - name: deploy package
-      run: dotnet nuget push "bin/release/*.nupkg" --api-key ${{ secrets.GIT_PAT }} --source default
+      run: dotnet nuget push "letsDo/bin/release/*.nupkg" --api-key ${{ secrets.GIT_PAT }} --source default
