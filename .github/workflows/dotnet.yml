@@ -18,7 +18,7 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Changing work dir
-      run: cd ./letsDo
+      run: cd letsDo
     - name: List files
       run: ls
     - name: Restore dependencies
