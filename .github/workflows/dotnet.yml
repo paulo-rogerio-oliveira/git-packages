@@ -21,6 +21,8 @@ jobs:
       run: dotnet restore ./letsDo
     - name: Build
       run: dotnet build ./letsDo --configuration Release --no-restore
+    - name: test project
+      run: dotnet test ./letsDo 
     - name: pack content
       run: dotnet pack ./letsDo --configuration Release
     - name: deploy package
